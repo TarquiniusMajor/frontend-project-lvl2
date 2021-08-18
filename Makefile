@@ -3,4 +3,4 @@ install:
 publish:
 	npm publish --dry-run
 gendiff: 
-	node bin/gendiff.js --help
+	node bin/gendiff.js -h
