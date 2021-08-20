@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { Command } from 'commander/esm.mjs';
 import * as path from 'path';
 import _ from 'lodash';
