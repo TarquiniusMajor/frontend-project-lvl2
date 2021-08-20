@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin":{
+  "bin": {
     "gendiff": "bin/gendiff.js"
   },
   "type": "module",
@@ -24,5 +24,11 @@
     "commander": "^8.1.0",
     "fs": "^0.0.1-security",
     "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "jest": "^27.0.6",
+    "jest-cli": "^27.0.6"
   }
 }
