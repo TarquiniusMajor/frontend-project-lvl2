@@ -7,4 +7,4 @@ gendiff:
 test:
 	node bin/gendiff.js file1.json file2.json
 lint:
-	npx eslint
+	npx eslint .
