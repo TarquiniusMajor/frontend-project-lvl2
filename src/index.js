@@ -1,15 +1,18 @@
 import * as path from 'path';
 import _ from 'lodash';
 import { readFileSync } from 'fs';
+import parse from './parsers.js';
 
 const getPath = (filepath) => {
   const curPath = path.isAbsolute(filepath) ? filepath : path.resolve(filepath);
   return curPath;
 };
-const getObj = (filepath) => JSON.parse(readFileSync(getPath(filepath)));
-const genDiff = (file1, file2) => {
-  const obj1 = getObj(file1);
-  const obj2 = getObj(file2);
+
+const genDiff = (filepath1, filepath2) => {
+  const file1 = readFileSync(getPath(filepath1));
+  const file2 = readFileSync(getPath(filepath2));
+  const obj1 = parse(file1, path.extname(filepath1));
+  const obj2 = parse(file2, path.extname(filepath2));
   const resKeys = _.union(_.keys(obj1), _.keys(obj2)).sort();
   const res = resKeys
     .reduce((acc, value) => {
@@ -22,4 +25,4 @@ const genDiff = (file1, file2) => {
   return `{\n${res}\n}`;
 };
 
-export { getPath, getObj, genDiff };
+export { getPath, genDiff };

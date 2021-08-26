@@ -7,6 +7,6 @@ gendiff:
 lint:
 	npx eslint .
 test:
-	node --experimental-vm-modules node_modules/.bin/jest
+	node --experimental-vm-modules node_modules/.bin/jest --bail
 test-coverage:
 	npm test -- --coverage --coverageProvider=v8
