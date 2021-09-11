@@ -1,0 +1,118 @@
+{
+    "key": "root",
+    "type": "diffed",
+    "status": "diff",
+    "children": [
+      {
+        "key": "common",
+        "type": "diffed",
+        "status": "diff",
+        "children": [
+          {
+            "key": "follow",
+            "type": "value",
+            "status": "added",
+            "value": false
+          },
+          {
+            "key": "setting1",
+            "type": "value",
+            "status": "unchanged",
+            "value": "Value 1"
+          },
+          {
+            "key": "setting2",
+            "type": "value",
+            "status": "excluded",
+            "value": 200
+          },
+          {
+            "key": "setting3",
+            "type": "value",
+            "status": "updated",
+            "value": [true, null]
+          },
+          {
+            "key": "setting4",
+            "type": "value",
+            "status": "added",
+            "value": "blah blah"
+          },
+          {
+            "key": "setting5",
+            "type": "value",
+            "status": "added",
+            "value": { "key5": "value5" }
+          },
+          {
+            "key": "setting6",
+            "type": "diffed",
+            "status": "diff",
+            "children": [
+              {
+                "key": "doge",
+                "type": "diffed",
+                "status": "diff",
+                "children": [
+                  {
+                    "key": "wow",
+                    "type": "value",
+                    "status": "updated",
+                    "value": ["", "so much"]
+                  }
+                ]
+              },
+              {
+                "key": "key",
+                "type": "value",
+                "status": "unchanged",
+                "value": "value"
+              },
+              {
+                "key": "ops",
+                "type": "value",
+                "status": "added",
+                "value": "vops"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "group1",
+        "type": "diffed",
+        "status": "diff",
+        "children": [
+          {
+            "key": "baz",
+            "type": "value",
+            "status": "updated",
+            "value": ["bas", "bars"]
+          },
+          {
+            "key": "foo",
+            "type": "value",
+            "status": "unchanged",
+            "value": "bar"
+          },
+          {
+            "key": "nest",
+            "type": "value",
+            "status": "updated",
+            "value": [{ "key": "value" }, "str"]
+          }
+        ]
+      },
+      {
+        "key": "group2",
+        "type": "value",
+        "status": "excluded",
+        "value": { "abc": 12345, "deep": { "id": 45 } }
+      },
+      {
+        "key": "group3",
+        "type": "value",
+        "status": "added",
+        "value": { "deep": { "id": { "number": 45 } }, "fee": 100500 }
+      }]
+  }
