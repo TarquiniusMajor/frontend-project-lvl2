@@ -1,7 +1,6 @@
 import { test, expect } from '@jest/globals';
 import { fileURLToPath } from 'url';
 import * as path from 'path';
-import { readFileSync } from 'fs';
 import { genDiff } from '../src/index';
 import stylishObj from '../__fixtures__/formated/stylishFixture.js';
 
