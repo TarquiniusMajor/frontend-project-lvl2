@@ -13,20 +13,15 @@ const addedFormatter = (node, parent) => `    Property '${createPropertyName(nod
 const excludedFormatter = (node, parent) => `    Property '${createPropertyName(node, parent)}' was removed`;
 const updatedFormatter = (node, parent) => `    Property '${createPropertyName(node, parent)}' was updated. From ${normalize(node.value[0])} to ${normalize(node.value[1])}`;
 const formatterDispatcher = (node, parent) => {
-  let res;
   switch (node.status) {
     case 'added':
-      res = addedFormatter(node, parent);
-      break;
+      return addedFormatter(node, parent);
     case 'excluded':
-      res = excludedFormatter(node, parent);
-      break;
+      return excludedFormatter(node, parent);
     case 'updated':
-      res = updatedFormatter(node, parent);
-      break;
-    default: break;
+      return updatedFormatter(node, parent);
+    default: return 'unknown status';
   }
-  return res;
 };
 const plain = (obj, parent = undefined) => {
   const keys = obj.children.filter((value) => value.status !== 'unchanged');
