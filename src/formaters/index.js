@@ -1,5 +1,6 @@
 import stylish from './stylish.js';
 import plain from './plain.js';
+import json from './json.js';
 
 const formatter = (obj, format = 'stylish') => {
   if (format === 'stylish') {
@@ -7,6 +8,9 @@ const formatter = (obj, format = 'stylish') => {
   }
   if (format === 'plain') {
     return plain(obj);
+  }
+  if (format === 'json') {
+    return json(obj);
   }
   return `Неизвестный формат: ${format}`;
 };
