@@ -9,7 +9,7 @@ const getPath = (filepath) => {
   return curPath;
 };
 
-const genDiff = (filepath1, filepath2, format) => {
+export default (filepath1, filepath2, format) => {
   const file1 = readFileSync(getPath(filepath1));
   const file2 = readFileSync(getPath(filepath2));
   const obj1 = parse(file1, path.extname(filepath1));
@@ -17,5 +17,3 @@ const genDiff = (filepath1, filepath2, format) => {
   const diffObj = comparator(obj1, obj2);
   return formatter(diffObj, format);
 };
-
-export { getPath, genDiff };
