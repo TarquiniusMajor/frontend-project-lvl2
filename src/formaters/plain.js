@@ -9,9 +9,9 @@ const createPropertyName = (obj, parents) => {
   if (parents === 'root' || !parents) { return `${res}`; }
   return `${parents}.${res}`;
 };
-const addedFormatter = (node, parent) => `    Property '${createPropertyName(node, parent)}' was added with value: ${normalize(node.value)}`;
-const excludedFormatter = (node, parent) => `    Property '${createPropertyName(node, parent)}' was removed`;
-const updatedFormatter = (node, parent) => `    Property '${createPropertyName(node, parent)}' was updated. From ${normalize(node.value[0])} to ${normalize(node.value[1])}`;
+const addedFormatter = (node, parent) => `Property '${createPropertyName(node, parent)}' was added with value: ${normalize(node.value)}`;
+const excludedFormatter = (node, parent) => `Property '${createPropertyName(node, parent)}' was removed`;
+const updatedFormatter = (node, parent) => `Property '${createPropertyName(node, parent)}' was updated. From ${normalize(node.value[0])} to ${normalize(node.value[1])}`;
 const formatterDispatcher = (node, parent) => {
   switch (node.status) {
     case 'added':
